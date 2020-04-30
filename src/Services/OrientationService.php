@@ -1,5 +1,5 @@
 <?php
-namespace Byte123\ImageUpload\Services;
+namespace Bytedigital123\ImageUpload\Services;
 
 class OrientationService
 {

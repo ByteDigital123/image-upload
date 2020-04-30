@@ -1,6 +1,6 @@
 <?php
 
-namespace Byte123\ImageUpload;
+namespace Bytedigital123\ImageUpload;
 
 use Illuminate\Support\ServiceProvider;
 

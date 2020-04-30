@@ -1,11 +1,11 @@
 <?php
 
-namespace Byte123\ImageUpload;
+namespace Bytedigital123\ImageUpload;
 
 use Intervention\Image\Image;
-use Byte123\ImageUpload\Services\ResizeImageService;
-use Byte123\ImageUpload\Services\CropImageService;
-use Byte123\ImageUpload\BaseUpload;
+use Bytedigital123\ImageUpload\Services\ResizeImageService;
+use Bytedigital123\ImageUpload\Services\CropImageService;
+use Bytedigital123\ImageUpload\BaseUpload;
 
 class ImageUpload extends BaseUpload
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace Byte123\ImageUpload;
+namespace Bytedigital123\ImageUpload;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Byte123\O,ageUpload\Skeleton\SkeletonClass
+ * @see \Bytedigital123\O,ageUpload\Skeleton\SkeletonClass
  */
 class ImageUploadFacade extends Facade
 {

@@ -1,7 +1,7 @@
 <?php
-namespace Byte123\ImageUpload\Services;
+namespace Bytedigital123\ImageUpload\Services;
 
-use Byte123\ImageUpload\Services\OrientationService;
+use Bytedigital123\ImageUpload\Services\OrientationService;
 
 class ResizeImageService
 {

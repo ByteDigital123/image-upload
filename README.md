@@ -1,9 +1,9 @@
 # Very short description of the package
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/byte123/file-upload.svg?style=flat-square)](https://packagist.org/packages/byte123/file-upload)
-[![Build Status](https://img.shields.io/travis/byte123/file-upload/master.svg?style=flat-square)](https://travis-ci.org/byte123/file-upload)
-[![Quality Score](https://img.shields.io/scrutinizer/g/byte123/file-upload.svg?style=flat-square)](https://scrutinizer-ci.com/g/byte123/file-upload)
-[![Total Downloads](https://img.shields.io/packagist/dt/byte123/file-upload.svg?style=flat-square)](https://packagist.org/packages/byte123/file-upload)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/Bytedigital123/file-upload.svg?style=flat-square)](https://packagist.org/packages/Bytedigital123/file-upload)
+[![Build Status](https://img.shields.io/travis/Bytedigital123/file-upload/master.svg?style=flat-square)](https://travis-ci.org/Bytedigital123/file-upload)
+[![Quality Score](https://img.shields.io/scrutinizer/g/Bytedigital123/file-upload.svg?style=flat-square)](https://scrutinizer-ci.com/g/Bytedigital123/file-upload)
+[![Total Downloads](https://img.shields.io/packagist/dt/Bytedigital123/file-upload.svg?style=flat-square)](https://packagist.org/packages/Bytedigital123/file-upload)
 
 This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
 
@@ -12,18 +12,18 @@ This is where your description should go. Try and limit it to a paragraph or two
 You can install the package via composer:
 
 ```bash
-composer require byte123/file-upload
+composer require Bytedigital123/file-upload
 ```
 
 ## Usage
 
-``` php
+```php
 // Usage description here
 ```
 
 ### Testing
 
-``` bash
+```bash
 composer test
 ```
 
@@ -41,8 +41,8 @@ If you discover any security related issues, please email chris@builtbypixel.com
 
 ## Credits
 
-- [Chris](https://github.com/byte123)
-- [All Contributors](../../contributors)
+-   [Chris](https://github.com/Bytedigital123)
+-   [All Contributors](../../contributors)
 
 ## License
 

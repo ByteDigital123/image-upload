@@ -1,8 +1,8 @@
 <?php
 
-namespace Byte123\ImageUpload\Tests;
+namespace Bytedigital123\ImageUpload\Tests;
 
-use Byte123\ImageUpload\ImageUploadServiceProvider;
+use Bytedigital123\ImageUpload\ImageUploadServiceProvider;
 use Orchestra\Testbench\TestCase;
 
 class ExampleTest extends TestCase

@@ -1,11 +1,12 @@
 {
-    "name": "byte123/image-upload",
+    "name": "bytedigital123/image-upload",
     "description": "A package to handle image uploads",
     "keywords": [
-        "byte123",
-        "image-upload"
+        "byte-digital",
+        "image-upload",
+        "laravel"
     ],
-    "homepage": "https://github.com/byte123/image-upload",
+    "homepage": "https://github.com/bytedigital123/image-upload",
     "license": "MIT",
     "type": "library",
     "authors": [
@@ -26,12 +27,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Byte123\\ImageUpload\\": "src"
+            "Bytedigital123\\ImageUpload\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Byte123\\ImageUpload\\Tests\\": "tests"
+            "Bytedigital123\\ImageUpload\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -44,10 +45,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Byte123\\ImageUpload\\ImageUploadServiceProvider"
+                "Bytedigital123\\ImageUpload\\ImageUploadServiceProvider"
             ],
             "aliases": {
-                "ImageUpload": "Byte123\\ImageUpload\\ImageUploadFacade"
+                "ImageUpload": "Bytedigital123\\ImageUpload\\ImageUploadFacade"
             }
         }
     }
