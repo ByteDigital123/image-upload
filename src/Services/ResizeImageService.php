@@ -14,36 +14,36 @@ class ResizeImageService
 
     }
 
-    public function resize($file, $height, $width)
+    public function resize($file, $height, $width, $extension)
     {
         $this->orientation = $this->orientationService->getOrientation($file);
 
         switch ($this->orientation) {
             case 'landscape':
 
-                $file->resize($this->width, null, function ($c) {
+                $file->resize($width, null, function ($c) {
                     $c->aspectRatio();
                 });
 
-                $file->encode($this->extension, 100);
+                $file->encode($extension, 100);
                 break;
 
             case 'portrait':
 
-                $file->resize($this->height, null, function ($c) {
+                $file->resize($height, null, function ($c) {
                     $c->aspectRatio();
                 });
 
-                $file->encode($this->extension, 100);
+                $file->encode($extension, 100);
                 break;
 
             default:
 
-                $file->widen($this->width, function ($c) {
+                $file->widen($width, function ($c) {
                     $c->aspectRatio();
                 });
 
-                $file->encode($this->extension, 100);
+                $file->encode($extension, 100);
                 break;
         };
 

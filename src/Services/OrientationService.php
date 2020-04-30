@@ -3,7 +3,7 @@ namespace Bytedigital123\ImageUpload\Services;
 
 class OrientationService
 {
-    private function getOrientation($file)
+    public function getOrientation($file)
     {
         list($img_width, $img_height) = getimagesize($file);
 

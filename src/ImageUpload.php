@@ -45,7 +45,7 @@ class ImageUpload extends BaseUpload
 
     public function resize($height, $width)
     {
-        $this->image = $this->resizeImageService->resize($this->file, $height, $width);
+        $this->image = $this->resizeImageService->resize($this->file, $height, $width, $this->extension);
 
         return $this;
     }
