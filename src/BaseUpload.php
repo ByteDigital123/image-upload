@@ -16,10 +16,13 @@ class BaseUpload
     protected function saveImage($filesystem)
     {
         try {
-            return Storage::disk($filesystem)->put($this->name, $this->image);
+            Storage::disk($filesystem)->put($this->name, $this->image);
         } catch (\Exception $e) {
             abort(500, $e->getMessage());
         }
+
+        return Storage::disk($filesystem)->url($this->name);
+
     }
 
     protected function getFileInfo()

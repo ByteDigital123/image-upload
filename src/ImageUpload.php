@@ -33,7 +33,9 @@ class ImageUpload extends BaseUpload
 
     public function upload($filesystem)
     {
-        $image_url = $this->saveImage($filesystem);
+        $this->saveImage($filesystem);
+
+        $url = Storage::disk($filesystem)->url($this->name);
 
         return [
             'bytes' => filesize($this->file),
