@@ -18,7 +18,7 @@ class ImageUpload extends BaseUpload
     public function __construct(
         ResizeImageService $resizeImageService,
         CropImageService $cropImageService,
-        EncodeImageService $encodeImageService,
+        EncodeImageService $encodeImageService
     ) {
         $this->resizeImageService = $resizeImageService;
         $this->cropImageService = $cropImageService;

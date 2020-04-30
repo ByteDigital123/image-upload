@@ -7,21 +7,18 @@ class ResizeImageService
     {
         switch ($orientation) {
             case 'landscape':
-
                 $image->resize($width, null, function ($c) {
                     $c->aspectRatio();
                 });
                 break;
 
             case 'portrait':
-
                 $image->resize($height, null, function ($c) {
                     $c->aspectRatio();
                 });
                 break;
 
             default:
-
                 $image->widen($width, function ($c) {
                     $c->aspectRatio();
                 });
