@@ -14,7 +14,13 @@ class BaseUpload
     protected $file;
     protected $orientation;
 
-    protected function saveImage($filesystem)
+    /**
+     * save the image to storage and return a url
+     *
+     * @param string $filesystem
+     * @return string
+     */
+    protected function saveImage(string $filesystem): string
     {
         try {
             Storage::disk($filesystem)->put($this->name, $this->image);
