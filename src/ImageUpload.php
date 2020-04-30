@@ -22,7 +22,7 @@ class ImageUpload extends BaseUpload
 
     public function addFile($file)
     {
-        $this->file = $img;
+        $this->file = $file;
 
         $this->getFileInfo($file);
 
