@@ -91,7 +91,7 @@ class ImageUpload extends BaseUpload
 
     public function encode($level)
     {
-        $this->image = $this->encodeImageService->encode($this->image, $level);
+        $this->image = $this->encodeImageService->encode($this->image, $this->extension, $level);
 
         return $this;
     }
