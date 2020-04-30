@@ -12,6 +12,7 @@ class BaseUpload
     protected $extension;
     protected $mime_type;
     protected $file;
+    protected $orientation;
 
     protected function saveImage($filesystem)
     {
@@ -27,7 +28,7 @@ class BaseUpload
 
     protected function getFileInfo()
     {
-        $this->getMimetype()->getFileExtension()->getFileName();
+        $this->getMimetype()->getFileExtension()->getFileName()->getOrientation();
     }
 
     private function getMimeType()
@@ -53,5 +54,18 @@ class BaseUpload
 
         return $this;
 
+    }
+
+    public function getOrientation()
+    {
+        list($img_width, $img_height) = getimagesize($this->file);
+
+        if ($img_width > $img_height) {
+            $this->orientation = 'landscape';
+        } else {
+            $this->orientation = 'portrait';
+        }
+
+        return $this;
     }
 }

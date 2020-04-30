@@ -1,53 +1,40 @@
 <?php
 namespace Bytedigital123\ImageUpload\Services;
 
-use Bytedigital123\ImageUpload\Services\OrientationService;
-
 class ResizeImageService
 {
-    protected $orientation;
-    protected $orientationService;
-
-    public function __construct(OrientationService $orientationService)
+    public function resize($image, $height, $width, $extension, $orientation)
     {
-        $this->orientationService = $orientationService;
-
-    }
-
-    public function resize($file, $height, $width, $extension)
-    {
-        $this->orientation = $this->orientationService->getOrientation($file);
-
-        switch ($this->orientation) {
+        switch ($orientation) {
             case 'landscape':
 
-                $file->resize($width, null, function ($c) {
+                $image->resize($width, null, function ($c) {
                     $c->aspectRatio();
                 });
 
-                $file->encode($extension, 100);
+                $image->encode($extension, 100);
                 break;
 
             case 'portrait':
 
-                $file->resize($height, null, function ($c) {
+                $image->resize($height, null, function ($c) {
                     $c->aspectRatio();
                 });
 
-                $file->encode($extension, 100);
+                $image->encode($extension, 100);
                 break;
 
             default:
 
-                $file->widen($width, function ($c) {
+                $image->widen($width, function ($c) {
                     $c->aspectRatio();
                 });
 
-                $file->encode($extension, 100);
+                $image->encode($extension, 100);
                 break;
         };
 
-        return $file;
+        return $image;
 
     }
 

@@ -1,22 +1,12 @@
 <?php
 namespace Bytedigital123\ImageUpload\Services;
 
-use Bytedigital123\ImageUpload\Services\OrientationService;
-
 class cropImageService
 {
-    protected $orientationService;
-
-    public function __construct(OrientationService $orientationService)
+    public function crop($image, $height, $width, $orientation)
     {
-        $this->orientationService = $orientationService;
-    }
 
-    public function crop($image, $height, $width)
-    {
-        $this->orientation = $this->orientationService->getOrientation($file);
-
-        switch ($this->orientation) {
+        switch ($orientation) {
             case 'landscape':
                 return $image->crop($width, $height);
                 break;
