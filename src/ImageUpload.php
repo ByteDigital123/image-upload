@@ -2,7 +2,7 @@
 
 namespace Bytedigital123\ImageUpload;
 
-use Intervention\Image\Image;
+use Intervention\Image\Facades\Image;
 use Bytedigital123\ImageUpload\Services\ResizeImageService;
 use Bytedigital123\ImageUpload\Services\CropImageService;
 use Bytedigital123\ImageUpload\BaseUpload;

@@ -1,6 +1,10 @@
 <?php
 namespace Bytedigital123\ImageUpload;
 
+use Illuminate\Support\Facades\Storage;
+use Carbon\Carbon;
+use Bytedigital123\ImageUpload\Services\SanitizeFileName;
+
 class BaseUpload
 {
     protected $name;
