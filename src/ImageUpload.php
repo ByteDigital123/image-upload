@@ -5,6 +5,7 @@ namespace Bytedigital123\ImageUpload;
 use Intervention\Image\Facades\Image;
 use Illuminate\Http\UploadedFile;
 use Bytedigital123\ImageUpload\Services\ResizeImageService;
+use Bytedigital123\ImageUpload\Services\EncodeImageService;
 use Bytedigital123\ImageUpload\Services\CropImageService;
 use Bytedigital123\ImageUpload\ImageUpload;
 use Bytedigital123\ImageUpload\BaseUpload;
@@ -13,13 +14,15 @@ class ImageUpload extends BaseUpload
 {
     protected $resizeImageService;
     protected $cropImageService;
-
+    protected $encodeImageService;
     public function __construct(
-        ResizeImageService $resizeService,
-        CropImageService $cropImageService
+        ResizeImageService $resizeImageService,
+        CropImageService $cropImageService,
+        EncodeImageService $encodeImageService,
     ) {
-        $this->resizeImageService = $resizeService;
+        $this->resizeImageService = $resizeImageService;
         $this->cropImageService = $cropImageService;
+        $this->encodeImageService = $encodeImageService;
     }
 
     /**
@@ -82,6 +85,13 @@ class ImageUpload extends BaseUpload
     public function crop(int $height, int $width)
     {
         $this->image = $this->cropImageService->crop($this->image, $height, $width, $this->orientation);
+
+        return $this;
+    }
+
+    public function encode($level)
+    {
+        $this->image = $this->encodeImageService->encode($level);
 
         return $this;
     }

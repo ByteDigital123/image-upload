@@ -11,8 +11,6 @@ class ResizeImageService
                 $image->resize($width, null, function ($c) {
                     $c->aspectRatio();
                 });
-
-                $image->encode($extension, 100);
                 break;
 
             case 'portrait':
@@ -20,8 +18,6 @@ class ResizeImageService
                 $image->resize($height, null, function ($c) {
                     $c->aspectRatio();
                 });
-
-                $image->encode($extension, 100);
                 break;
 
             default:
@@ -29,8 +25,6 @@ class ResizeImageService
                 $image->widen($width, function ($c) {
                     $c->aspectRatio();
                 });
-
-                $image->encode($extension, 100);
                 break;
         };
 
