@@ -6,6 +6,5 @@ class EncodeImageService
     public function encode($image, $extension, $level)
     {
         return $image->encode($extension, $level);
-
     }
 }
