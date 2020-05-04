@@ -18,13 +18,10 @@
     ],
     "require": {
         "php": "^7.1",
-        "illuminate/support": "^6.0",
+        "illuminate/support": "^5.7.28",
         "intervention/image": "^2.5"
     },
-    "require-dev": {
-        "orchestra/testbench": "^4.0",
-        "phpunit/phpunit": "^8.0"
-    },
+    "require-dev": {},
     "autoload": {
         "psr-4": {
             "Bytedigital123\\ImageUpload\\": "src"
