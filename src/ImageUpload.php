@@ -56,7 +56,7 @@ class ImageUpload extends BaseUpload
         return [
             'bytes' => filesize($this->file),
             'format' => $this->mime_type,
-            'original_filename' => $this->name,
+            'original_filename' => $this->original_filename,
             'url' => $url,
         ];
     }

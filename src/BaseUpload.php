@@ -13,6 +13,7 @@ class BaseUpload
     protected $mime_type;
     protected $file;
     protected $orientation;
+    protected $original_filename;
 
     /**
      * save the image to storage and return a url
@@ -54,9 +55,9 @@ class BaseUpload
 
     private function getFileName()
     {
-        $name = pathinfo($this->file->getClientOriginalName(), PATHINFO_FILENAME);
+        $this->original_filename = pathinfo($this->file->getClientOriginalName(), PATHINFO_FILENAME);
 
-        $this->name = (new SanitizeFileName())->handle($name) . '-' . Carbon::now()->format('Y-m-d-G-i-s') . '.' . $this->extension;
+        $this->name = (new SanitizeFileName())->handle($this->original_filename) . '-' . Carbon::now()->format('Y-m-d-G-i-s') . '.' . $this->extension;
 
         return $this;
 
